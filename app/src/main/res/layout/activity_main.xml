@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryBackgroundColor"
+    tools:context=".ui.main.MainActivity">
+
+    <TextView
+        android:id="@+id/summary_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:foregroundGravity="center_horizontal"
+        android:text="@string/summary_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/cardView3"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:text="@string/summary_title" />
+
+    <TextView
+        android:id="@+id/lastWeekText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:foregroundGravity="center_horizontal"
+        android:text="@string/last_week"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Last week" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:minHeight="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastWeekText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/standard_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lastCallTitleText"
+                style="@style/SummaryBoldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/last_call_title" />
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/SummaryStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="21 sec" />
+
+            <TextView
+                android:id="@+id/textView7"
+                style="@style/SummaryBoldStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/longest_call_title" />
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/SummaryStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1h 12m 12 sec" />
+
+            <TextView
+                android:id="@+id/textView9"
+                style="@style/SummaryBoldStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/summary_time_title" />
+
+            <TextView
+                android:id="@+id/textView10"
+                style="@style/SummaryStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="41h 12min 23 sec" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:minHeight="110dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summary_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lastCallTitleText2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/longest_call_title"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/SummaryBoldStyle" />
+
+            <TextView
+                android:id="@+id/textView62"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="21 sec"
+                style="@style/SummaryStyle" />
+
+            <TextView
+                android:id="@+id/lastCallTitleText23"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/summary_call_time"
+                style="@style/SummaryBoldStyle"/>
+
+            <TextView
+                android:id="@+id/textView623"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="1h 12m 12 sec"
+                style="@style/SummaryStyle"/>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/lastCallTitleText2"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:text="@string/longest_call_title"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--style=""-->
+                    <!--tools:layout_editor_absoluteY="8dp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textView62"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:layout_marginEnd="8dp"-->
+                    <!--android:text="21 sec"-->
+                    <!--android:textStyle="bold"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--tools:layout_editor_absoluteY="8dp" />-->
+
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
