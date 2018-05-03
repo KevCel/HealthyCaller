@@ -2,13 +2,14 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/s_summaryTitleText"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primaryBackgroundColor"
     tools:context=".ui.main.MainActivity">
 
     <TextView
-        android:id="@+id/summary_title"
+        android:id="@+id/summaryTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -18,8 +19,8 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/cardView3"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/summaryCard"
+        app:layout_constraintTop_toBottomOf="@+id/lastWeekCard"
         tools:text="@string/summary_title" />
 
     <TextView
@@ -33,12 +34,12 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/lastWeekCard"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Last week" />
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/lastWeekCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -51,48 +52,49 @@
         app:layout_constraintTop_toBottomOf="@+id/lastWeekText">
 
         <LinearLayout
+            android:id="@+id/lastWeekContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/standard_margin"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/standard_margin">
 
             <TextView
-                android:id="@+id/lastCallTitleText"
+                android:id="@+id/lw_lastCallTitleText"
                 style="@style/SummaryBoldStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/last_call_title" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/lw_lastCallText"
                 style="@style/SummaryStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="21 sec" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/lw_longestCallTitleText"
                 style="@style/SummaryBoldStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/longest_call_title" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/lw_longestCallText"
                 style="@style/SummaryStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1h 12m 12 sec" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/lw_summary_title_text"
                 style="@style/SummaryBoldStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/summary_time_title" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/lw_summary_text"
                 style="@style/SummaryStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -101,7 +103,7 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cardView3"
+        android:id="@+id/summaryCard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -110,79 +112,49 @@
         android:minHeight="110dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/summary_title">
+        app:layout_constraintTop_toBottomOf="@+id/summaryTitle">
 
         <LinearLayout
+            android:id="@+id/summaryContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/lastCallTitleText2"
-                android:layout_height="wrap_content"
+                android:id="@+id/s_longestCallTitleText"
+                style="@style/SummaryBoldStyle"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/longest_call_title"
-                app:layout_constraintStart_toStartOf="parent"
-                style="@style/SummaryBoldStyle" />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/textView62"
-                android:layout_height="wrap_content"
+                android:id="@+id/s_longestCallText"
+                style="@style/SummaryStyle"
                 android:layout_width="wrap_content"
-                android:text="21 sec"
-                style="@style/SummaryStyle" />
+                android:layout_height="wrap_content"
+                android:text="21 sec" />
 
             <TextView
                 android:id="@+id/lastCallTitleText23"
-                android:layout_height="wrap_content"
+                style="@style/SummaryBoldStyle"
                 android:layout_width="wrap_content"
-                android:text="@string/summary_call_time"
-                style="@style/SummaryBoldStyle"/>
+                android:layout_height="wrap_content"
+                android:text="@string/summary_call_time" />
 
             <TextView
-                android:id="@+id/textView623"
-                android:layout_height="wrap_content"
+                android:id="@+id/s_summary_text"
+                style="@style/SummaryStyle"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="1h 12m 12 sec"
-                style="@style/SummaryStyle"/>
-
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:orientation="horizontal"-->
-                <!--android:weightSum="1">-->
-
-                <!--<TextView-->
-                    <!--android:id="@+id/lastCallTitleText2"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_weight="0.5"-->
-                    <!--android:layout_marginStart="8dp"-->
-                    <!--android:text="@string/longest_call_title"-->
-                    <!--app:layout_constraintStart_toStartOf="parent"-->
-                    <!--style=""-->
-                    <!--tools:layout_editor_absoluteY="8dp" />-->
-
-                <!--<TextView-->
-                    <!--android:id="@+id/textView62"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_weight="0.5"-->
-                    <!--android:layout_marginEnd="8dp"-->
-                    <!--android:text="21 sec"-->
-                    <!--android:textStyle="bold"-->
-                    <!--app:layout_constraintEnd_toEndOf="parent"-->
-                    <!--tools:layout_editor_absoluteY="8dp" />-->
-
-            <!--</LinearLayout>-->
+                android:text="1h 12m 12 sec" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="1">
-
 
 
             </LinearLayout>

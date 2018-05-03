@@ -1,7 +1,7 @@
 package net.celesoft.healthycaller.ui.main
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import net.celesoft.healthycaller.R
 
 class MainActivity : AppCompatActivity() {
