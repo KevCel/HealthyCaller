@@ -12,16 +12,11 @@ class IntroPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     private var pFragment: ArrayList<IntroPageFragment> = ArrayList()
 
     init {
-        pFragment.add(IntroPageFragment.newInstance("Lol", R.drawable.ic_bluetooth_audio))
-        pFragment.add(IntroPageFragment.newInstance("Yesyt2", R.drawable.ic_bluetooth_audio))
-        pFragment.add(IntroPageFragment.newInstance("Lol", R.drawable.ic_bluetooth_audio))
-        pFragment.add(IntroPageFragment.newInstance("Yesyt2", R.drawable.ic_bluetooth_audio))
-        pFragment.add(IntroPageFragment.newInstance("Lol", R.drawable.ic_bluetooth_audio))
-        pFragment.add(IntroPageFragment.newInstance("Yesyt2", R.drawable.ic_bluetooth_audio))
-        pFragment.add(IntroPageFragment.newInstance("Lol", R.drawable.ic_bluetooth_audio))
-        pFragment.add(IntroPageFragment.newInstance("Yesyt2", R.drawable.ic_bluetooth_audio))
-        pFragment.add(IntroPageFragment.newInstance("Lol", R.drawable.ic_bluetooth_audio))
-        pFragment.add(IntroPageFragment.newInstance("Yesyt2", R.drawable.ic_bluetooth_audio))
+
+        //TODO: replace temporary fragments with correct contents
+        pFragment.add(IntroPageFragment.newInstance("Test1", R.drawable.ic_bluetooth_audio))
+        pFragment.add(IntroPageFragment.newInstance("Test2", R.drawable.ic_bluetooth_audio))
+        pFragment.add(IntroPageFragment.newInstance("Test3", R.drawable.ic_bluetooth_audio))
 
     }
 
@@ -31,9 +26,5 @@ class IntroPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
     override fun getCount(): Int {
         return pFragment.size
-    }
-
-    public fun nextStep() {
-
     }
 }
