@@ -20,7 +20,7 @@ class IntroPageFragment : Fragment() {
         val rootView = inflater.inflate(R.layout.fragment_intro, container, false)
 
         rootView.introLabel.text = arguments?.getString(TITLE) ?: "empty"
-        rootView.introIcon.setImageResource(arguments?.getInt(IMAGE) ?: R.drawable.ic_bluetooth_audio)
+        rootView.introIcon.setImageResource(arguments.getInt(IMAGE) ?: R.drawable.ic_bluetooth_audio)
 
         return rootView
     }
